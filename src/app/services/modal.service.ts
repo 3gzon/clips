@@ -18,6 +18,11 @@ export class ModalService {
     });
     console.log(this.modals);
   }
+
+  //fixing memory leak
+  unregister(id: string) {
+    this.modals.filter((element) => element.id !== id);
+  }
   isModalOpen(id: string): boolean {
     return !!this.modals.find((element) => element.id === id)?.visibile;
   }

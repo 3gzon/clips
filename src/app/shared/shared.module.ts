@@ -5,10 +5,11 @@ import { ModalService } from '../services/modal.service';
 import { TabsContainerComponent } from './tabs-container/tabs-container.component';
 import { TabComponent } from './tab/tab.component';
 import { InputComponent } from './input/input.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [ModalComponent, TabsContainerComponent, TabComponent, InputComponent],
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule],
   exports: [ModalComponent, TabsContainerComponent, TabComponent, InputComponent],
   //array of services
   providers: [ModalService]
